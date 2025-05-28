@@ -39,7 +39,7 @@ public class GridImpl implements Grid{
         return gameBoard[row][col]; 
     }
     
-    // TODO: double check the items in da 
+    //TODO:  double check the items in da 
     //       iterables are also not copies 
     //       ie. not referential
     @Override public Grid copy() {
@@ -63,7 +63,7 @@ public class GridImpl implements Grid{
 
                 if      (currentPiece == PieceColour.WHITE){ cell = 'W'; }
                 else if (currentPiece == PieceColour.BLACK){ cell = 'B'; }
-                else throw new IllegalStateException(String.format("Uninitialised Cell at (%d,%d)", row, col));
+                // else throw new IllegalStateException(String.format("Uninitialised Cell at (%d,%d)", row, col));
                 stringOut += cell;
             }
             stringOut += '\n';  
