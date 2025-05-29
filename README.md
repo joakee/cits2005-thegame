@@ -66,7 +66,7 @@ This project implements "*the game*" (see PDF) for the CITS2005 Object Oriented 
 - Department of Computer Science & Software Engineering (Skeleton)
 - [James Oakey](https://github.com/joakee) (Everything else)
 
-## License
+## DISCLAIMER
 
 This project is for educational purposes. You may use it as a reference, but please do not submit it as your own work should you be enrolled in CITS2005 and this assignment is reused in the future. See [UWA's Academic Integrity Policy](https://www.uwa.edu.au/policy/-/media/project/uwa/uwa/policy-library/policy/student-administration/academic-integrity/academic-integrity-policy.doc). 
 
