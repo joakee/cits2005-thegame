@@ -1,4 +1,4 @@
-# Project Overview
+œ# Project Overview
 
 This project is worth **20% of your mark**. You must work on this **individually**. You may seek help from lab tutors, but they are limited to clarifying your understanding of the project or pointing you to relevant course content. They are **not allowed** to write code for you or explain specific solution steps.
 

@@ -15,7 +15,8 @@ public class GridImpl implements Grid{
         }
     }
 
-    @Override public int getSize(){ return size; }
+  
+    
     @Override public void setPiece(int row, int col, PieceColour piece){
         if (row < 0 || col < 0 || row >= size || col >= size){
             throw new IllegalArgumentException(String.format(
@@ -63,11 +64,13 @@ public class GridImpl implements Grid{
 
                 if      (currentPiece == PieceColour.WHITE){ cell = 'W'; }
                 else if (currentPiece == PieceColour.BLACK){ cell = 'B'; }
-                // else throw new IllegalStateException(String.format("Uninitialised Cell at (%d,%d)", row, col));
+                // else throw new IllegalStateException(Strin g.format("Uninitialised Cell at (%d,%d)", row, col));
                 stringOut += cell;
             }
             stringOut += '\n';  
         }
         return stringOut;
     }
+
+    @Override public int getSize(){ return size; }
 }

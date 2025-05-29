@@ -18,13 +18,11 @@ public class GameImpl implements Game {
     }
 
 
-
     @Override 
     public boolean isOver(){ 
         return getMoves().isEmpty() || winner() != PieceColour.NONE; 
     
     }
-
 
 
     @Override 
@@ -34,7 +32,6 @@ public class GameImpl implements Game {
         return PieceColour.NONE;
     }
 
-    
 
     @Override 
     public Collection<Move> getMoves(){
@@ -42,7 +39,9 @@ public class GameImpl implements Game {
         
         for (int row = 0; row < size; row++){
             for (int col = 0; col < size; col++){
-                moves.add(new MoveImpl(row, col));
+                if (grid.getPiece(row, col) == PieceColour.NONE){
+                    moves.add(new MoveImpl(row, col));
+                }
             }
         }
         return moves;
@@ -51,27 +50,42 @@ public class GameImpl implements Game {
 
 
     @Override 
-    public void makeMove(Move move) {
+    public void makeMove(Move move){
         int row = move.getRow(); int col = move.getCol();
 
-        if (row < 0 || col < 0 || row >= size || col >= size){
+        // illegal state handling
+        if (row < 0 || col < 0 || row >= size || col >= size)
             throw new IllegalArgumentException("You can't just move off the board!");
-        }
-        if (grid.getPiece(row, col) != PieceColour.NONE) {
+        if (grid.getPiece(row, col) != PieceColour.NONE) 
             throw new IllegalArgumentException("Cell taken. Get lost!");
-        }
+        
 
         //TODO: maybe deprecate in favor of a turnary op
         grid.setPiece(row, col, currentPlayer);
         if (currentPlayer == PieceColour.WHITE){ currentPlayer = PieceColour.BLACK; }
         else                                   { currentPlayer = PieceColour.WHITE; }
 
+        System.out.println("After move:");                                  ///
+        System.out.println(this.grid); // uses GridImpl.toString()          ///
+        System.out.println("Moves left: " + getMoves().size());     
+
     }
 
 
+
+    @Override 
+    public Game copy(){
+        GameImpl dupeGame = new GameImpl(size);
+        dupeGame.grid = (GridImpl) this.grid.copy();
+        dupeGame.size = this.size;
+        dupeGame.currentPlayer = this.currentPlayer;      // no need to deep copy as its referencing a constant anyways
+        
+        return dupeGame;
+    }
+
     @Override public PieceColour currentPlayer(){ return currentPlayer; }
     @Override public Grid getGrid() { return grid.copy(); }
-    @Override public Game copy() { return new GameImpl(grid.getSize()); }
+    
 
 
 
