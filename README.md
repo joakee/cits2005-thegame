@@ -1,12 +1,9 @@
-# CITS2005 Project: *"The Game"
+# CITS2005 Project: *"The Game"*
 ### Semester 1, 2025
 ##### The University of Western Australia
-
 ----
 
 This project implements "*the game*" (see PDF) for the CITS2005 Object Oriented Programming unit at the University of Western Australia 
-## Features
-
 
 ## Project Structure
 
