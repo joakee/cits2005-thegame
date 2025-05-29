@@ -72,6 +72,6 @@ This project is for educational purposes. You may use it as a reference, but ple
 
 Any faculty who request that this project be removed from GitHub should contact me directly at my student email address.
 
-Any honest students who happen to be doing the exact same assignment any time are encouraged to also email me or raise an issue on this repository to request that I remove this project from GitHub. I'd be happy to do so - anything else will just make life harder for all of us.
+Any honest students who happen to be doing the exact same assignment any time after 2025 are encouraged to also email me or raise an issue on this repo to remove it. I'd be happy to do so - anything else will just make life harder for all of us.
 
 Peace! ✌️
